@@ -1,0 +1,11 @@
+#input{
+    justify-self: unset;
+    margin: auto;
+}
+#all{
+    height: 23em;
+    background-image: url(../../../public/images/blog/b5.webp) alt='loop';
+    background-position:center;
+    background-size: contain;
+    background-repeat: repeat-x;
+}

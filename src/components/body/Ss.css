@@ -1,0 +1,10 @@
+#alls{
+    background-color: darkslategrey;
+    transition-duration: all 0.58s ease-in-out;
+}
+#alls:hover{
+    transition: all 0.9s ease-in-out;
+    background-image: url(../../../public/images/blog/b4.webp);
+    transform: translate(3px, 2px);
+    
+}
