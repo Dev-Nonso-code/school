@@ -1,19 +1,28 @@
-import React,{useState } from "react"
+import React,{useState, useEffect } from "react"
 import Back from "../common/back/Back"
 import "./contact.css"
+ // import { View, Text } from 'react-native';
 
 // import { useNavigate } from "react-router-dom"
 
 const Contact = () => {
+  
 //  let navigate = useNavigate()
+const [currentDate, setCurrentDate] = useState('');
   const [email, setemail] = useState("email");
   const [subject, setSubject] = useState("subject");
   const [name, setName] = useState("name");
   const [body, setBody] = useState("body");
   const [allvalues, setAllvalues] = useState([]);
-
+//  const date = New Date()
+ useEffect(() => {
+    // Update the date state to the current date
+    const today = new Date();
+    const date = today.toDateString(); // Format the date to a readable string
+    setCurrentDate(date);
+  }, []);
   const values =
-    { email:email, subject:subject, name:name, body:body }
+    { email:email, subject:subject, name:name, body:body, currentDate:currentDate }
   
   const submit =(e)=>{
     e.preventDefault();

@@ -34,7 +34,7 @@ function App() {
         <Route exact path='/student/signup' element={<Ssignup />} />
         <Route exact path='/student/login' element={<Slogin />} />
         <Route exact path='/admin/login' element={<Alogin />} />
-        <Route exact path='/student/post' element={<Post />} />
+        <Route exact path='/admin/post' element={<Post />} />
         <Route exact path='/admin/signup' element={<Asignup />} />
         <Route exact path='/student/courses' element={<CourseHome />} />
         <Route exact path='/student/team' element={<Team />} />

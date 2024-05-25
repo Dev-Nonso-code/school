@@ -37,7 +37,11 @@
   color: #1eb2a6;
   background-color: #fff;
 }
-
+.newletter i:hover{
+  cursor: pointer;
+  background-color: black;
+  color: #eeeeee;
+}
 footer {
   max-width: 99em;
   flex-wrap: wrap;

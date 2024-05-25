@@ -32,6 +32,20 @@
     "web-vitals": "^2.1.4",
     "yup": "^1.4.0"
   },
+  "keywords": [
+    "react",
+    "reactjs",
+    "react-component",
+    "credit-card",
+    "credit card",
+    "bank-account",
+    "payments",
+    "forms",
+    "validation",
+    "material-ui",
+    "material design",
+    "stripe"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
