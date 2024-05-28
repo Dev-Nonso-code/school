@@ -4,8 +4,8 @@ import axios from "axios";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import Back from '../common/back/Back';
 
 const Asignup = () => {
 
@@ -119,6 +119,9 @@ const Asignup = () => {
 
   return (
     <>
+    <div>
+        <Back />
+    </div>
        <div
                 id="alls"
                 className="container-fluid border border-2 

@@ -4,8 +4,8 @@ import { useState } from "react";
 import axios from "axios";
 // import { Nav } from "../Navbar component/Nav"
 import './Sl.css'
-import { useNavigate } from "react-router-dom"
-import { Link } from 'react-router-dom'
+import { useNavigate, Link } from "react-router-dom"
+// import Back from '../common/back/Back';
 
 const Slogin = () => {
     const [email, setemail] = useState("email");
@@ -54,8 +54,10 @@ const Slogin = () => {
 
     };
     return (
-
         <>
+        {/* <div className='bg-primary'>
+            <Back />
+        </div> */}
             <div id='all' className=" border border-2 
            border-primary box-shadow mt-2 text-center">
                 <h2 className='text-info'>Login Here</h2>

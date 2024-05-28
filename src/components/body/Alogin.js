@@ -2,6 +2,7 @@ import React from 'react'
 
 import { useState } from "react";
 import axios from "axios";
+import Back from '../common/back/Back';
 // import { Nav } from "../Navbar component/Nav"
 
 import { useNavigate } from "react-router-dom"
@@ -57,6 +58,7 @@ const Alogin = () => {
     };
   return (
     <all>
+        <Back />
          <div id='all' className=" border border-2 
            border-primary box-shadow mt-2 text-center">
                 <h2 className='text-info'>Login Here</h2>

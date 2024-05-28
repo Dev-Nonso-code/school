@@ -1,11 +1,17 @@
 import React from "react";
 import { blog } from "../../../dummydata";
 import "./footer.css";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  let navigate = useNavigate();
   const sendEmail = () => {
     alert("email sent");
   };
+  const posted = () => {
+    alert("Calm down jor")
+    navigate("/admin/post")
+  }
 
   return (
     <>
@@ -53,6 +59,7 @@ const Footer = () => {
               <li>Terms & Conditions</li>
               <li>Privacy</li>
               <li>Feedbacks</li>
+              <li onClick={posted} id="posted">Post</li>
             </ul>
           </div>
           <div className="box">
@@ -98,7 +105,7 @@ const Footer = () => {
       <div className="legal">
         <p>
           Copyright ©2022 All rights reserved | This template is made with{" "}
-          <i className="fa fa-heart"></i> by GorkhCoder
+          <i className="fa fa-heart"></i> by Dev-Nonso
         </p>
       </div>
     </>
