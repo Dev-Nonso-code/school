@@ -19,7 +19,7 @@ const Alogin = () => {
         username: username,
         password: password,
     }
-    const endpoint = "http://localhost:8080/admin/login";
+    const endpoint = "http://localhost:5100/admin/login";
     let navigate = useNavigate()
 
     const Login = (e) => {
