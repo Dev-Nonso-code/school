@@ -12,7 +12,7 @@ const Asignup = () => {
     const [message, setmessage] = useState("");
     const [isloading, setisloading] = useState(false);
   
-    const endpoint = "http://localhost:8080/admin/signup";
+    const endpoint = "http://localhost:5100/admin/signup";
     let navigate = useNavigate();
     const formik = useFormik({
       initialValues: {

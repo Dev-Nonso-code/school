@@ -9,22 +9,24 @@ import { useNavigate } from "react-router-dom"
 import { Link } from 'react-router-dom'
 
 const Alogin = () => {
-    const [email, setusername] = useState("email");
-    const [username, setemail] = useState("username");
+    const [email, setemail] = useState("email");
+    const [username, setusername] = useState("username");
     const [password, setpassword] = useState("password");
     const [message, setmessage] = useState("");
+    const [isloading, setisloading] = useState(false);
 
     const values = {
         email: email,
         username: username,
         password: password,
     }
-    const endpoint = "http://localhost:8080/admin/login";
+    const endpoint = "http://localhost:5100/admin/login";
     let navigate = useNavigate()
 
     const Login = (e) => {
         e.preventDefault();
         console.log(values);
+        setisloading(true);
         axios
             .post(endpoint, values)
             .then((response) => {
@@ -108,7 +110,7 @@ const Alogin = () => {
                         </div>
 
                         <button onClick={Login} className="btn btn-primary mt-2 w-25">
-                            Login
+                        {isloading ? "loading please wait" : "Login"}
                         </button>
 
                         <p className='mt-5 text-warning'>Don't have account with us, Signup

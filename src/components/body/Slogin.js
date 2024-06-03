@@ -16,7 +16,7 @@ const Slogin = () => {
         email: email,
         password: password,
     }
-    const endpoint = "http://localhost:8080/student/login";
+    const endpoint = "http://localhost:5100/log/signin";
     let navigate = useNavigate()
 
     const Login = (e) => {
@@ -76,6 +76,8 @@ const Slogin = () => {
                                 // onBlur={formik.handleBlur}
                                 onChange={(e) => setemail(e.target.value)}
                                 type="text"
+                                autoComplete='email'
+                                name='email'
                                 className="form-control w-50 m-2 m-auto"
                                 placeholder="Email"
                             />

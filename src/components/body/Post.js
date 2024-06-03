@@ -1,17 +1,37 @@
 /* eslint-disable no-undef */
 import React, { useState, useEffect } from "react";
 import Clock from "../../Time";
+import axios from "axios";
 // import Back from "../common/back/Back";
 
 const Post = () => {
+  const endpoint = "http://localhost:5100/admin/comments"
   const [val, setValues] = useState([]);
+  //  const [message, setMessage] = useState([]);
+  const [isloading, setisloading] = useState(false);
+  useEffect(() => {
+    axios.get(endpoint)
+      .then((res) => {
+        console.log(res);
+        // setMessage(res.data)
+        setisloading(true)
+      }).catch((err) => {
+        if (err) {
+          console.log(err);
+          // setisloading(false)
+          // setisloading(false)
+        }
+      })
+  }, [])
   useEffect(() => {
     const storedItems = JSON.parse(localStorage.getItem("value"));
     if (storedItems) {
       setValues(storedItems);
       console.log(storedItems);
+      setisloading(false)
     }
   }, []);
+
 
   return (
     <>
@@ -29,7 +49,7 @@ const Post = () => {
             <th scope="col">Body</th>
             <th scope="col">Date</th>
           </tr>
-          {val.map((item, index) => (
+          {isloading ? <h1>Loading</h1> : val.map((item, index) => (
             <>
               {/* <div>
                 <Back />

@@ -10,7 +10,7 @@ const Notfound = () => {
                 <h1>PAGE NOT FOUND</h1>
                 <h3>Please Go To</h3>
                 <div>
-                    <Link className='text-info fw-bolder fs-3' to='/home'>Home</Link>
+                    <Link className='text-info fw-bolder fs-3' to='/student/home'>Home</Link>
                     {/* <First /> */}
                 </div>
             </div>
