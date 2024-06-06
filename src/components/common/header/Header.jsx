@@ -1,11 +1,17 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 //  import Head from "./Head"
 
 import "./header.css"
 
 const Header = () => {
   const [click, setClick] = useState(false)
+  let navigate = useNavigate();
+
+  const certi =()=>{
+    console.log(certi)
+    navigate("/student/signup");
+  }
 
   return (
     <>
@@ -36,7 +42,7 @@ const Header = () => {
             </li>
           </ul>
          <div className='start'>
-            <div className='button'>GET CERTIFICATE</div>
+            <div className='button' type="button" onClick={certi}>GET CERTIFICATE</div>
           </div> 
           <button className='btn-toggle' id="boom" onClick={() => setClick(!click)}>
             {click ? <i class="bi bi-x-octagon"></i> : <i class="bi bi-justify"></i>}

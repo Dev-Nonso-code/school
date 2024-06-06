@@ -1,0 +1,11 @@
+#head{
+    justify-content: space-between;
+    justify-items: flex-end;
+    display: flex;
+    max-width: 50em;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  #ok{
+    justify-self: end;
+  }

@@ -28,7 +28,7 @@ const Post = () => {
     if (storedItems) {
       setValues(storedItems);
       console.log(storedItems);
-      setisloading(false)
+      setisloading(true)
     }
   }, []);
 
@@ -49,7 +49,7 @@ const Post = () => {
             <th scope="col">Body</th>
             <th scope="col">Date</th>
           </tr>
-          {isloading ? <h1>Loading</h1> : val.map((item, index) => (
+          {! isloading ? <h1>Loading...</h1> : val.map((item, index) => (
             <>
               {/* <div>
                 <Back />
