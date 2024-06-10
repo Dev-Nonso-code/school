@@ -11,7 +11,7 @@ const CoursesCard = (val) => {
 const config = {
     public_key: 'FLWPUBK-TEST-38ff9144bcb3581d755ae013f575a9a2-X',
     tx_ref: Date.now().toString(),
-    amount: 2000,
+    amount: 200,
     currency: 'USD',
     payment_options: 'card,mobilemoney,ussd',
     redirect_url: "https://google.com",
@@ -44,11 +44,11 @@ const config = {
                 <div className='text'>
                   <h1>{val.coursesName}</h1>
                   <div className='rate'>
-                    <i class="bi bi-star"></i>
-                    <i className='bi b-star icon'></i>
-                    <i className='bi b-star icon'></i>
-                    <i className='bi b-star icon'></i>
-                    <i className='bi b-star icon'></i>
+                    <i className="bi bi-star icon"></i>
+                    <i className='bi bi-star icon'></i>
+                    <i className='bi bi-star icon'></i>
+                    <i className='bi bi-star icon'></i>
+                    <i className='bi bi-star icon'></i>
                     <label htmlFor=''>(5.0)</label>
                   </div>
                   <div className='details'>

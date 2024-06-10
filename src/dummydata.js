@@ -261,7 +261,7 @@ export const team = [
   },
   {
     cover: "../images/team/t4.webp",
-    name: "Ph.D Brian Wooden",
+    name: "Ph.D Brian Dan",
     work: "DEVELOPER AND LEAD INSTRUCTOR",
   },
   {
@@ -337,8 +337,8 @@ export const blog = [
   {
     id: 1,
     type: "admin",
-    date: "JAN. 18, 2021",
-    com: "30 COMMENTS ",
+    date: "JAN. 18, 2024",
+    com: "300 COMMENTS ",
     title: "Build your Dream Software & Engineering Career",
     desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
     cover: "../images/blog/b1.webp",
@@ -346,8 +346,8 @@ export const blog = [
   {
     id: 2,
     type: "admin",
-    date: "API. 25, 2022",
-    com: "5 COMMENTS ",
+    date: "API. 25, 2024",
+    com: "500 COMMENTS ",
     title: "Build your Dream Software & Engineering Career",
     desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
     cover: "../images/blog/b2.webp",
@@ -355,8 +355,8 @@ export const blog = [
   {
     id: 3,
     type: "user",
-    date: "MAY. 15, 2022",
-    com: "10 COMMENTS ",
+    date: "MAY. 15, 2024",
+    com: "100 COMMENTS ",
     title: "Build your Dream Software & Engineering Career",
     desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
     cover: "../images/blog/b3.webp",
@@ -364,8 +364,8 @@ export const blog = [
   {
     id: 4,
     type: "admin",
-    date: "JAN. 02, 2021",
-    com: "3 COMMENTS ",
+    date: "JAN. 02, 2024",
+    com: "3000 COMMENTS ",
     title: "Build your Dream Software & Engineering Career",
     desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
     cover: "../images/blog/b4.webp",
@@ -373,8 +373,8 @@ export const blog = [
   {
     id: 5,
     type: "admin",
-    date: "DEC. 14, 2020",
-    com: "3 COMMENTS ",
+    date: "DEC. 14, 2023",
+    com: "700 COMMENTS ",
     title: "Build your Dream Software & Engineering Career",
     desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
     cover: "../images/blog/b5.webp",
@@ -382,8 +382,8 @@ export const blog = [
   {
     id: 6,
     type: "user",
-    date: "JAN. 18, 2021",
-    com: "12 COMMENTS ",
+    date: "JAN. 18, 2024",
+    com: "120 COMMENTS ",
     title: "Build your Dream Software & Engineering Career",
     desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
     cover: "../images/blog/b6.webp",
@@ -392,7 +392,7 @@ export const blog = [
 export const testimonal = [
   {
     id: 1,
-    name: "ROGER SCOTT",
+    name: "ROGER JOE",
     post: "MARKETING MANAGER",
     desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
     cover: "../images/testo/t1.webp",

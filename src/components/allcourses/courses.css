@@ -124,4 +124,7 @@
     max-width: 760px;
     flex-wrap: wrap;
   }
+  #food{
+    display: grid1;
+  }
 }

@@ -7,6 +7,10 @@ const Footer = () => {
   let navigate = useNavigate();
   const sendEmail = () => {
     alert("email sent");
+   // if(input === ""){
+   //   alert("email required");
+   // }
+
   };
   const posted = () => {
     alert("Calm down jor")

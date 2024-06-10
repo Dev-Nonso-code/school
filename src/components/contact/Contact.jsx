@@ -15,7 +15,7 @@ const Contact = () => {
   const [body, setBody] = useState("body");
   const [allvalues, setAllvalues] = useState([]);
   //  const date = New Date()
-  const endpoint = "http://localhost:8080/student/comment";
+  const endpoint = "http://localhost:5100/admin/comment";
   useEffect(() => {
     // Update the date state to the current date
     const today = new Date();
