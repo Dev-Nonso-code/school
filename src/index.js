@@ -7,9 +7,12 @@ import { BrowserRouter } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import "bootstrap-icons/font/bootstrap-icons.css";
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import 'animate.css';
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import { inject } from '@vercel/analytics';
+ 
+inject()
 // import { useFlutterwave } from "flutterwave-react-v3";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faCheckSquare, faCoffee } from '@fortawesome/fontawesome-free-solid'
@@ -22,7 +25,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
     <SpeedInsights />
-    <Button />
+    {/* <Button /> */}
     <App />
     </BrowserRouter>
   </React.StrictMode>
