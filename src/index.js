@@ -9,6 +9,7 @@ import 'bootstrap/dist/js/bootstrap.js';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Button from 'react-bootstrap/Button';
 import 'animate.css';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 // import { useFlutterwave } from "flutterwave-react-v3";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faCheckSquare, faCoffee } from '@fortawesome/fontawesome-free-solid'
@@ -20,6 +21,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <SpeedInsights />
     <Button />
     <App />
     </BrowserRouter>
