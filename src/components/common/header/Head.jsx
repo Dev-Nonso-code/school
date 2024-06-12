@@ -1,18 +1,18 @@
 import React from "react";
-import "./head.css";
+import "./Head.css";
 
 const Head = () => {
   return (
     <>
       <section className="head">
         <div className="container flexSB" >
-          <div id="head">
+          <div id="head" className="m-auto">
             <div className="logo">
               <h1>ACADEMIA</h1>
               <span>ONLINE EDUCATION & LEARNING</span>
             </div>
 
-            <div id="ok" className="social">
+            <div id="ok" className="social m-auto">
               <a href="https://www.facebook.com/godwin.obasi.395/">
                 <i class="bi bi-facebook icon p-2"></i>
               </a>

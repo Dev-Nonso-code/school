@@ -113,7 +113,7 @@ const Alogin = () => {
                         </button>
 
                         <p className='mt-5 text-warning'>Don't have account with us, Signup
-                            <strong><Link className='text-danger fw-bolder fs-3' to='/student/signup'>Here</Link></strong> </p>
+                            <strong><Link className='text-danger fw-bolder fs-3' to='/admin/signup'>Here</Link></strong> </p>
                     </div>
                 </form>
                 <h4>{message}</h4>

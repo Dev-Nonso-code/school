@@ -137,6 +137,25 @@ const Asignup = () => {
                         {/* <p className="alert alert-success">{message}</p> */}
                         <form onSubmit={formik.handleSubmit} type="submit" method="POST">
                             <h1 className="m-2 text-warning">Signh Up Here</h1>
+                           
+                            <input
+                                placeholder="username"
+                                type="username"
+                                className={
+                                    formik.touched.username && formik.errors.username
+                                        ? "my-2 form-control border-warning is-invalid"
+                                        : "my-2 form-control"
+                                }
+                                // autoComplete="username"
+                                // required
+                                name="username"
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                            />
+                            {formik.touched.username && (
+                                <small className="text-light">{formik.errors.username}</small>
+                            )}
+
                             <input
                                 placeholder="email"
                                 type="email"
@@ -153,24 +172,6 @@ const Asignup = () => {
                             />
                             {formik.touched.email && (
                                 <small className="text-light">{formik.errors.email}</small>
-                            )}
-
-                            <input
-                                placeholder="username"
-                                type="username"
-                                className={
-                                    formik.touched.username && formik.errors.username
-                                        ? "my-2 form-control border-warning is-invalid"
-                                        : "my-2 form-control"
-                                }
-                                autoComplete="username"
-                                // required
-                                name="username"
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
-                            />
-                            {formik.touched.username && (
-                                <small className="text-light">{formik.errors.username}</small>
                             )}
 
                             <input
