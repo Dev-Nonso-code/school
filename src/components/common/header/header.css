@@ -14,6 +14,7 @@ li Link{
   background-color: transparent;
   color: aquamarine;
   display: none;
+  cursor: pointer;
 }
 .head .icon {
   margin-left: 10px;
@@ -63,6 +64,7 @@ header ul li a:hover {
   }
   #boom{
     display: block;
+    cursor: pointer;
   }
   header ul.flexSB {
     display: none;
@@ -87,3 +89,39 @@ header ul li a:hover {
     background-color: #1eb2a6;
   }
 }
+  @media screen and (max-width: 600px) {
+    .start {
+      clip-path: none;
+    }
+    header {
+      margin: 0;
+      background-color: #1eb2a6;
+      position: relative;
+    }
+    #boom{
+      display: block;
+      cursor: pointer;
+    }
+    header ul.flexSB {
+      display: none;
+    }
+    header ul li {
+      margin-bottom: 20px;
+    }
+    .toggle {
+      display: block;
+      background: none;
+      color: #fff;
+      font-size: 30px;
+      position: absolute;
+      right: 0;
+      top: -20px;
+    }
+    .mobile-nav {
+      position: absolute;
+      top: 7vh;
+      left: 0;
+      width: 100%;
+      background-color: #1eb2a6;
+    }
+  }
