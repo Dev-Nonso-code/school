@@ -38,14 +38,14 @@ const Contact = () => {
       .post(endpoint, values)
       .then((response) => {
         console.log(response.data);
-        alert("Login went throung");
+       // alert("Login went throung");
         alert(response.data.message);
       })
       .catch((err) => {
         console.log(err);
         // alert(values);
         alert(err);
-        // alert("not posted, try again");
+         alert("not posted, try again");
        // alert(message);
       });
     setAllvalues([...allvalues, values]);
@@ -60,6 +60,7 @@ const Contact = () => {
   return (
     <>
       <Back title="Contact us" />
+      
       <section className="contacts padding">
         <div className="container shadow flexSB">
           <div className="left row">

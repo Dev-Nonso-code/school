@@ -5,8 +5,8 @@ const Head = () => {
   return (
     <>
       <section className="head">
-        <div className="container flexSB" >
-          <div id="head" className="m-auto">
+        <div className="container flexSB d-flex" >
+          <div id="head" className="m-auto d-flex">
             <div className="logo">
               <h1>ACADEMIA</h1>
               <span>ONLINE EDUCATION & LEARNING</span>

@@ -1,17 +1,19 @@
 import React from "react"
 import "./courses.css"
 // import { useNavigate } from "react-router-dom"
-import { coursesCard } from "../../dummydata"
+import { coursesCard, price } from "../../dummydata"
+// import {coursesCard.priceAll} from "../../dummydata"
 import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';   
 
 
 const CoursesCard = (val) => {
  // let navigate = useNavigate()
- 
+// let priceAll = courseCard.priceAll
 const config = {
+  
     public_key: 'FLWPUBK-TEST-38ff9144bcb3581d755ae013f575a9a2-X',
     tx_ref: Date.now().toString(),
-    amount: 200,
+    amount: price,
     currency: 'USD',
     payment_options: 'card,mobilemoney,ussd',
     redirect_url: "https://google.com",
