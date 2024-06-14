@@ -146,7 +146,7 @@ export const coursesCard = [
     coursesName: "Introducing to with JAVA",
     courTeacher: [
       {
-        dcover: "./images/back.webp",
+        dcover: "../images/back.webp",
         name: "by Petter",
         totalTime: "80 lectures (200 hrs)",
       },
@@ -266,7 +266,7 @@ export const team = [
   },
   {
     cover: "../images/team/t5.webp",
-    name: "Ph.D Adrian Molises",
+    name: "Ph.D Godwin Obasi",
     work: "DEVELOPER AND LEAD INSTRUCTOR",
   },
   {
@@ -281,7 +281,7 @@ export const team = [
   },
   {
     cover: "../images/team/t8.webp",
-    name: "Ph.D Brian Wooden",
+    name: "Ph.D Chinonso Wooden",
     work: "DEVELOPER AND LEAD INSTRUCTOR",
   },
 ]

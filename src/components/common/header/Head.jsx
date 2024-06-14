@@ -14,11 +14,11 @@ const Head = () => {
 
             <div id="ok" className="social m-auto">
               <a href="https://www.facebook.com/godwin.obasi.395/">
-                <i class="bi bi-facebook icon p-2"></i>
+                <i className="bi bi-facebook icon p-2"></i>
               </a>
               <i className="bi bi-instagram icon p-2"></i>
               <i className="bi bi-twitter icon p-2"></i>
-              <i class="bi bi-youtube icon p-2"></i>
+              <i className="bi bi-youtube icon p-2"></i>
             </div>
           </div>
         </div>
