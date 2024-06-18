@@ -92,6 +92,7 @@ const Slogin = () => {
                                 type="password"
                                 className="form-control w-50 m-auto"
                                 placeholder="Password"
+                                autoComplete='password'
                             />
 
 
