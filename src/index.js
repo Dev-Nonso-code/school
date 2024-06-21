@@ -4,6 +4,7 @@ import App from "./App"
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
+import {configureStore} from "@reduxjs/toolkit"
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -11,6 +12,10 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import 'animate.css';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import { inject } from '@vercel/analytics';
+
+let store = configureStore({
+  reducer:{}
+})
  
 inject()
 // import { useFlutterwave } from "flutterwave-react-v3";
