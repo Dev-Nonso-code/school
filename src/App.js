@@ -16,11 +16,14 @@ import Ssignup from "./components/body/Ssignup"
 import Alogin from "./components/body/Alogin"
 import Asignup from "./components/body/Asignup"
 import Post from "./components/body/Post"
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 
 function App() {
-  let state = useSelector(state=>state)
-  console.log(state);
+  let count = useSelector(state=>state.counterReducer.myName)
+  console.log(count);
+  const dispath=()=>{
+    
+  }
   return (
     <>
       <div id="voov">
@@ -29,6 +32,9 @@ function App() {
       <div className="sticky-top bg-warning">
         <Header />
       </div>
+      <h3>{count}
+        <button onClick={dispath}>increment</button>
+      </h3>
 
       <Routes>
 
