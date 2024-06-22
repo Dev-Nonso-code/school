@@ -4,7 +4,7 @@ import App from "./App"
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
-import {configureStore} from "@reduxjs/toolkit"
+import { configureStore } from "@reduxjs/toolkit"
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -12,11 +12,14 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import 'animate.css';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import { inject } from '@vercel/analytics';
+import { Provider } from "react-redux";
+import counterReducer from "./redux/counter"
+
 
 let store = configureStore({
-  reducer:{}
+  reducer: {count:counterReducer}
 })
- 
+
 inject()
 // import { useFlutterwave } from "flutterwave-react-v3";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -28,11 +31,13 @@ inject()
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-    <SpeedInsights />
-    {/* <Button /> */}
-    <App />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <SpeedInsights />
+        {/* <Button /> */}
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 )
 

@@ -16,7 +16,11 @@ import Ssignup from "./components/body/Ssignup"
 import Alogin from "./components/body/Alogin"
 import Asignup from "./components/body/Asignup"
 import Post from "./components/body/Post"
+import { useSelector } from "react-redux"
+
 function App() {
+  let state = useSelector(state=>state)
+  console.log(state);
   return (
     <>
       <div id="voov">
