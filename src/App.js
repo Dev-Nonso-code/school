@@ -17,13 +17,13 @@ import Alogin from "./components/body/Alogin"
 import Asignup from "./components/body/Asignup"
 import Post from "./components/body/Post"
 import { useSelector, useDispatch } from "react-redux"
+import { increment } from "./redux/counter"
 
 function App() {
-  let count = useSelector(state=>state.counterReducer.myName)
+  let dispatch = useDispatch()
+  let count = useSelector(state=>state.counterReducer)
   console.log(count);
-  const dispath=()=>{
-    
-  }
+ 
   return (
     <>
       <div id="voov">
@@ -33,7 +33,7 @@ function App() {
         <Header />
       </div>
       <h3>{count}
-        <button onClick={dispath}>increment</button>
+        <button onClick={()=>dispatch(increment())}>increment</button>
       </h3>
 
       <Routes>
