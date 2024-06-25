@@ -1,11 +1,4 @@
-#head {
-  display: flex;
-  justify-content: space-between;
-  justify-items: flex-end;
-  justify-self: center;
-}
-
-#ok {
-  justify-self: end;
-  display: flexbox;
-}
+#head{
+    justify-content: space-between;
+    justify-items: flex-end;
+  }
