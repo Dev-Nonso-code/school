@@ -63,7 +63,7 @@ const Footer = () => {
               <li>Terms & Conditions</li>
               <li>Privacy</li>
               <li>Feedbacks</li>
-              <li onClick={posted} id="posted">Post</li>
+              <li onClick={posted} key="id" id="posted">Post</li>
             </ul>
           </div>
           <div className="box">
