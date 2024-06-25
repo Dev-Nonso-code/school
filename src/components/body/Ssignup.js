@@ -240,7 +240,7 @@ const Ssignup = () => {
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
                             />
-                            <button type='button' onClick={show} className='eye'>{showing ? <FaEye /> : <FaEyeSlash />}</button>
+                            <button id='eye' type='button' onClick={show} className='eye'>{showing ? <FaEye /> : <FaEyeSlash />}</button>
                             {formik.touched.password && (
                                 <small className="text-light">{formik.errors.password}</small>
                             )}

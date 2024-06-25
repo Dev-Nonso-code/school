@@ -125,7 +125,7 @@ const Slogin = () => {
                             {/* {formik.touched.email && <small className="text-light">{formik.errors.email}</small>} */}
                         </div>
 
-                        <div className='mt-3 d-flex' id='eyes'>
+                        <div className='mt-3 d-flexz' id='eyes'>
 
                             <input
                                 onChange={(e) => setpassword(e.target.value)}
