@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import "./App.css"
 import Header from "./components/common/header/Header"
 import { Routes, Route } from "react-router-dom"
@@ -6,6 +7,7 @@ import CourseHome from "./components/allcourses/CourseHome"
 import Team from "./components/team/Team"
 import Pricing from "./components/pricing/Pricing"
 import Blog from "./components/blog/Blog"
+import { useNavigate } from "react-router-dom"
 import Contact from "./components/contact/Contact"
 import Footer from "./components/common/footer/Footer"
 import Home from "./components/home/Home"
@@ -16,10 +18,14 @@ import Ssignup from "./components/body/Ssignup"
 import Alogin from "./components/body/Alogin"
 import Asignup from "./components/body/Asignup"
 import Post from "./components/body/Post"
+import Dashbord from "./components/body/Dashbord"
+
 // import { useSelector, useDispatch } from "react-redux"
 // import { increment } from "./redux/counter"
 
 function App() {
+  let token = localStorage.token
+  const navigate = useNavigate()
   // let dispatch = useDispatch()
   // let count = useSelector(state=>state.counterReducer)
   // console.log(count);
@@ -43,6 +49,11 @@ function App() {
         <Route exact path='/about' element={<About />} />
         <Route exact path='/student/signup' element={<Ssignup />} />
         <Route exact path='/student/login' element={<Slogin />} />
+        <Route exact path='/student/dashboard' element={token ? <Dashbord className="btn btn-info" />
+        :<navigate to="/student/login" />} />
+        <Route exact path='/dashboard' element={token ? <Dashbord className="btn btn-info" />
+        :<navigate to="/student/login" />} />
+        
         <Route exact path='/admin/login' element={<Alogin />} />
         <Route exact path='/admin/post' element={<Post />} />
         <Route exact path='/admin/signup' element={<Asignup />} />

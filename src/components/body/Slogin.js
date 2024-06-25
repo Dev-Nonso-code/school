@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+// /* eslint-disable no-unused-vars */
 
 import React from 'react'
 
@@ -7,29 +9,65 @@ import axios from "axios";
 import './Sl.css'
 import { useNavigate, Link } from "react-router-dom"
 // import Back from '../common/back/Back';
+// import { loguser } from "../services/Alluser";
+import { saveLinkBeforeLogin } from '../../redux/Checkall'
+import { ToastContainer, toast } from "react-toastify";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+// import { UseSelector } from "react-redux/es/hooks/useSelector";
+import {
+    postingSuccessful,
+    postingFailed,
+    postingUser,
+} from "../../redux/AlluserSlice";
+import AlluserSlice from "../../redux/AlluserSlice";
 
 const Slogin = () => {
     const [email, setemail] = useState("email");
     const [password, setpassword] = useState("password");
     const [message, setmessage] = useState("");
+    const [showing, setshowing] = useState(false);
+    const { isposting, postingsuccess, postingerror } = useSelector(
+        (state) => state.AlluserSlice
+    );
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const { alluser } = useSelector((state) => state.AlluserSlice);
 
+    const { thriftlink } = useSelector((state) => state.joinslice)
+    console.log(thriftlink);
     const values = {
         email: email,
         password: password,
     }
+    const show = () => {
+        showing ? setshowing(false) : setshowing(true);
+      };
     const endpoint = "http://localhost:5100/log/signin";
-    let navigate = useNavigate()
+    // let navigate = useNavigate()
 
     const Login = (e) => {
         e.preventDefault();
         console.log(values);
+        dispatch(postingUser())
         axios
             .post(endpoint, values)
             .then((response) => {
                 console.log(response.data);
                 alert("Login went throung")
                 alert(response.data.message);
+                dispatch(postingSuccessful(response.data.message));
+                localStorage.setItem("token", response.data.token);
+                toast.success(response.data.message)
                 setmessage(response.data.message)
+                if (thriftlink === null) {
+                    setTimeout(() => {
+                        navigate("/dashboard");
+                    }, [500000])
+                } else {
+                    dispatch(saveLinkBeforeLogin(null)); // Clear saved link
+                    navigate(thriftlink);
+                }
                 if (response.data.status) {
                     localStorage.token = response.data.token
                     localStorage.firstname = response.data.firstname
@@ -45,6 +83,8 @@ const Slogin = () => {
                 alert(err);
                 // alert("login faild");
                 alert(message);
+                dispatch(postingFailed(err.response.data.message))
+                toast.error(err.response.data.message)
 
             }); if (message === false) {
                 console.log(message);
@@ -56,7 +96,7 @@ const Slogin = () => {
     };
     return (
         <>
-        {/* <div className='bg-primary'>
+            {/* <div className='bg-primary'>
             <Back />
         </div> */}
             <div id='all' className=" border border-2 
@@ -85,7 +125,7 @@ const Slogin = () => {
                             {/* {formik.touched.email && <small className="text-light">{formik.errors.email}</small>} */}
                         </div>
 
-                        <div className='mt-3'>
+                        <div className='mt-3 d-flex' id='eyes'>
 
                             <input
                                 onChange={(e) => setpassword(e.target.value)}
@@ -94,6 +134,10 @@ const Slogin = () => {
                                 placeholder="Password"
                                 autoComplete='password'
                             />
+                            <button type="button" onClick={show} className="eye border" id='eye'>
+                                {showing ? <FaEye /> : <FaEyeSlash />}
+                            </button>
+                            <ToastContainer />
 
 
                         </div>
