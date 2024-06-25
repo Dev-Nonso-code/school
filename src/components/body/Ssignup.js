@@ -56,7 +56,10 @@ const Ssignup = () => {
                     console.log(Response.data);
                     console.log(Response.data.message);
                     setisloading(false);
-                    navigate("/dashboard");
+                    setTimeout(() => {
+                        navigate("/student/login");
+                      }, [5000])
+                    
                 })
                 .catch((errors) => {
                     // const value = (Response.data)
