@@ -28,7 +28,7 @@ const Forgotpassword = () => {
     setisloading(true)
     console.log(email);
   await  axios
-      .post("localhost:5100/log/reset", { email: email })
+      .post("http://localhost:5100/log/reset", { email: email })
       .then((res) => {
         setisloading(false)
         dispatch(postingSuccessful());
@@ -73,14 +73,14 @@ const Forgotpassword = () => {
                 </p>
               </div>
 
-              <form className="w-100 p-3  mx-auto" action="">
-                <div className="form-group">
-                  <label htmlFor="email">Email </label>
-                  <div className="d-flex justify-content-center align-items-center email-cont">
+              <form className="w-100 p-3  mx-auto text-center" action="">
+                <div className="form-group d-flex m-auto">
+                  {/* <label htmlFor="email">Email </label> */}
+                  <div className="d-flex justify-content-center align-items-center m-auto email-cont">
                     {/* <CiMail/> */}
                     <IoMdMail size={25}/>
                     <input
-                    className="px-2"
+                    className="px-2 form-control"
                       name="email"
                       onChange={(e) => setemail(e.target.value)}
                       type="email"
@@ -91,7 +91,7 @@ const Forgotpassword = () => {
                 <div className="w-100  d-flex justiify-content-center align-items-center  mt-3">
                   <div
                     onClick={sendemail}
-                    className="text-center btn btn-dark  mt-2 email-but"
+                    className="text-center m-auto btn btn-dark  mt-2 email-but"
                   >
                     {" "}
                     Send Email

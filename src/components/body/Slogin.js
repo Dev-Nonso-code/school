@@ -141,7 +141,7 @@ const Slogin = () => {
 
 
                         </div>
-                        <p className="text-end"> <Link className="pass" to="/forgot" >Forgot Password ?</Link></p>
+                        <p className="text-center"> <Link className="pass" to="/forgot" >Forgot Password ?</Link></p>
 
                         <button onClick={Login} className="btn btn-primary mt-2 w-25">
                             Login

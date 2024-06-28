@@ -127,4 +127,8 @@
   #food{
     display: grid1;
   }
+  #war{
+    display: grid1;
+    display: inline-block;
+  }
 }
