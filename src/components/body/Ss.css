@@ -1,0 +1,20 @@
+#alls {
+    background-color: darkslategrey;
+    transition-duration: all 0.58s ease-in-out;
+}
+
+#alls:hover {
+    transition: all 0.9s ease-in-out;
+    background-image: url(../../../public/images/blog/b4.webp);
+    background-position: 4%;
+    background-repeat: repeat-x;
+    background-size: 69lvh;
+    transform: translate(3px, 2px);
+    max-width: 94em;
+    /* flex-wrap: wrap; */
+    /* position: absolute; */
+}
+#eye{
+    max-width: 3em;
+    display: none;
+}
