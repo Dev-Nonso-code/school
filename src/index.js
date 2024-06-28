@@ -13,7 +13,7 @@ import 'animate.css';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import { inject } from '@vercel/analytics';
 import { Provider } from "react-redux";
-import { store } from "./redux/Store";
+import { store } from "./Redux/Store";
 // import counterReducer from "./redux/counter"
 
 

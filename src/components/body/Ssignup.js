@@ -10,7 +10,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate, Link } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'
-import { postingFailed, postingUser, postingSuccessful } from '../../redux/AlluserSlice'
+import { postingFailed, postingUser, postingSuccessful } from '../../Redux/AlluserSlice'
 import "./Ss.css"
 import { FaEye, FaEyeSlash } from "react-icons/fa"
 // import Post from './Post';

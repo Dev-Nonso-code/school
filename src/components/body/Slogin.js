@@ -10,7 +10,7 @@ import './Sl.css'
 import { useNavigate, Link } from "react-router-dom"
 // import Back from '../common/back/Back';
 // import { loguser } from "../services/Alluser";
-import { saveLinkBeforeLogin } from '../../redux/Checkall'
+import { saveLinkBeforeLogin } from '../../Redux/Checkall'
 import { ToastContainer, toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
@@ -19,8 +19,8 @@ import {
     postingSuccessful,
     postingFailed,
     postingUser,
-} from "../../redux/AlluserSlice";
-import AlluserSlice from "../../redux/AlluserSlice";
+} from "../../Redux/AlluserSlice";
+import AlluserSlice from "../../Redux/AlluserSlice";
 
 const Slogin = () => {
     const [email, setemail] = useState("email");
@@ -141,6 +141,7 @@ const Slogin = () => {
 
 
                         </div>
+                        <p className="text-end"> <Link className="pass" to="/forgot" >Forgot Password ?</Link></p>
 
                         <button onClick={Login} className="btn btn-primary mt-2 w-25">
                             Login

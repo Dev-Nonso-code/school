@@ -18,7 +18,9 @@ import Ssignup from "./components/body/Ssignup"
 import Alogin from "./components/body/Alogin"
 import Asignup from "./components/body/Asignup"
 import Post from "./components/body/Post"
+import Forgotpassword from "./components/body/Forgotpassword"
 import Dashbord from "./components/body/Dashbord"
+import Otp from "./components/body/Otp"
 
 // import { useSelector, useDispatch } from "react-redux"
 // import { increment } from "./redux/counter"
@@ -53,7 +55,8 @@ function App() {
         :<navigate to="/student/login" />} />
         <Route exact path='/dashboard' element={token ? <Dashbord className="btn btn-info" />
         :<navigate to="/student/login" />} />
-        
+        <Route path='/forgot' element={<Forgotpassword/>}/>
+        <Route path='/otp' element={<Otp/>}/>
         <Route exact path='/admin/login' element={<Alogin />} />
         <Route exact path='/admin/post' element={<Post />} />
         <Route exact path='/admin/signup' element={<Asignup />} />
