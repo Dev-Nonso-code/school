@@ -28,7 +28,7 @@ const Forgotpassword = () => {
     setisloading(true)
     console.log(email);
   await  axios
-      .post("http://localhost:5100/log/reset", { email: email })
+      .post("https://backend-i6k6.onrender.com/log/reset", { email: email })
       .then((res) => {
         setisloading(false)
         dispatch(postingSuccessful());

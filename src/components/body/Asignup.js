@@ -13,7 +13,7 @@ const Asignup = () => {
     const [message, setmessage] = useState("");
     const [isloading, setisloading] = useState(false);
   
-    const endpoint = "http://localhost:5100/admin/signup";
+    const endpoint = "https://backend-i6k6.onrender.com/admin/signup";
     let navigate = useNavigate();
     const formik = useFormik({
       initialValues: {

@@ -34,7 +34,7 @@ const config = {
   return (
     <>
       <section className='coursesCard'>
-        <div className='container grid2'>
+        <div className='container grid2' id="joke">
           {coursesCard.map((val) => (
             <div className='items'>
               <div className='content flex'>
