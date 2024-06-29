@@ -131,4 +131,9 @@
     display: grid1;
     display: inline-block;
   }
+  #joke{
+    display: inline-block;
+    text-align: center;
+    display: grid1;
+  }
 }

@@ -46,7 +46,7 @@ const Otp = () => {
       <div className="w-100 d-flex justify-content-center align-items-center content">
        <div className="body2">
        <div className="iner-body">
-          <div className="iner-body2">
+          <div className="iner-body2 m-auto">
             <div className="forg-cont">
             <h1 className="text-center fw-bold">Enter OTP</h1>
             <p className="text-center fs-5 fw-light">
@@ -54,12 +54,12 @@ const Otp = () => {
               change your password
             </p>
             </div>
-            <div className="inp-div mt-4">
+            <div className="inp-div mt-4 text-center ml-5 container grid2">
               {inputRefs.map((ref, index) => (
                 <input
                   key={index}
                   ref={ref} 
-                  className="inp-field"
+                  className="inp-field form-control w-25 m-2 text-center"
                   maxLength={1}
                   type="text"
                   value={inputs[index]}
@@ -67,7 +67,7 @@ const Otp = () => {
                 />
               ))}
             </div>
-            <div className="w-100 mt-3 p-2 but2">
+            <div className="w-100 mt-3 p-2 but2 m-auto text-center">
               <button onClick={verify} className="email-but">Verify</button>
               <ToastContainer/>
             </div>

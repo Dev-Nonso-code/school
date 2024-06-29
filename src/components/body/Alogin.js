@@ -20,7 +20,7 @@ const Alogin = () => {
         username: username,
         password: password,
     }
-    const endpoint = "http://localhost:5100/admin/login";
+    const endpoint = "https://backend-i6k6.onrender.com/admin/login";
     let navigate = useNavigate()
 
     const Login = (e) => {

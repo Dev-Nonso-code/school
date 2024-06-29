@@ -13,7 +13,7 @@ import Testimonal from '../home/testimonal/Testimonal'
 
 const Dashbord = () => {
   const navigate = useNavigate()
-  const endpoint3 = "http://localhost:5100/log/dashboard"
+  const endpoint3 = "https://backend-i6k6.onrender.com/log/dashboard"
   let token = localStorage.token
   // const firstname = localStorage.firstname
 

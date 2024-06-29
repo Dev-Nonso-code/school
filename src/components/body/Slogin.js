@@ -43,7 +43,7 @@ const Slogin = () => {
     const show = () => {
         showing ? setshowing(false) : setshowing(true);
       };
-    const endpoint = "http://localhost:5100/log/signin";
+    const endpoint = "https://backend-i6k6.onrender.com/log/signin";
     // let navigate = useNavigate()
 
     const Login = (e) => {

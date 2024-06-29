@@ -21,6 +21,8 @@ import Post from "./components/body/Post"
 import Forgotpassword from "./components/body/Forgotpassword"
 import Dashbord from "./components/body/Dashbord"
 import Otp from "./components/body/Otp"
+import Resetpassword from "./components/body/Restpassword"
+import Setpassword from "./components/body/Setpassword"
 
 // import { useSelector, useDispatch } from "react-redux"
 // import { increment } from "./redux/counter"
@@ -57,6 +59,8 @@ function App() {
         :<navigate to="/student/login" />} />
         <Route path='/forgot' element={<Forgotpassword/>}/>
         <Route path='/otp' element={<Otp/>}/>
+        <Route path='/reset/:inputsString' element={<Resetpassword/>}/>
+        <Route path='/set' element={<Setpassword/>}/>
         <Route exact path='/admin/login' element={<Alogin />} />
         <Route exact path='/admin/post' element={<Post />} />
         <Route exact path='/admin/signup' element={<Asignup />} />
