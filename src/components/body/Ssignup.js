@@ -24,6 +24,7 @@ const Ssignup = () => {
     const [isloading, setisloading] = useState(false);
 
     const endpoint = "https://backend-i6k6.onrender.com/log/signup";
+    // const endpoint = "http://localhost:5100/log/signup";
     let navigate = useNavigate();
     const show = () => {
         showing ? setshowing(false) : setshowing(true)

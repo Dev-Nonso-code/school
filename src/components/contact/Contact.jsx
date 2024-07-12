@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Back from "../common/back/Back";
 import "./contact.css";
 import axios from "axios";
-// import { View, Text } from 'react-native';
+
 
 // import { useNavigate } from "react-router-dom"
 
@@ -15,7 +15,8 @@ const Contact = () => {
   const [body, setBody] = useState("body");
   const [allvalues, setAllvalues] = useState([]);
   //  const date = New Date()
-  const endpoint = "https://backend-i6k6.onrender.com/admin/comment";
+  // const endpoint = "https://backend-i6k6.onrender.com/admin/comment";
+  const endpoint = "http://localhost:5100/admin/comment";
   useEffect(() => {
     // Update the date state to the current date
     const today = new Date();

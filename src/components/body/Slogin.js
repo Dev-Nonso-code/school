@@ -26,7 +26,7 @@ const Slogin = () => {
     const [email, setemail] = useState("email");
     const [password, setpassword] = useState("password");
     const [message, setmessage] = useState("");
-    const [showing, setshowing] = useState(false);
+    const [showing, setShowing] = useState(false);
     const { isposting, postingsuccess, postingerror } = useSelector(
         (state) => state.AlluserSlice
     );
@@ -41,8 +41,8 @@ const Slogin = () => {
         password: password,
     }
     const show = () => {
-        showing ? setshowing(false) : setshowing(true);
-      };
+        showing ? setShowing(false) : setShowing(true);
+    };
     const endpoint = "https://backend-i6k6.onrender.com/log/signin";
     // let navigate = useNavigate()
 
@@ -54,7 +54,7 @@ const Slogin = () => {
             .post(endpoint, values)
             .then((response) => {
                 console.log(response.data);
-                alert("Login went throung")
+                alert("Login went throng")
                 alert(response.data.message);
                 dispatch(postingSuccessful(response.data.message));
                 localStorage.setItem("token", response.data.token);
@@ -79,9 +79,8 @@ const Slogin = () => {
             })
             .catch((err) => {
                 console.log(err);
-                // alert(values);
+
                 alert(err);
-                // alert("login faild");
                 alert(message);
                 dispatch(postingFailed(err.response.data.message))
                 toast.error(err.response.data.message)
@@ -125,7 +124,7 @@ const Slogin = () => {
                             {/* {formik.touched.email && <small className="text-light">{formik.errors.email}</small>} */}
                         </div>
 
-                        <div className='mt-3 d-flexz' id='eyes'>
+                        <div className='mt-3 d-flex' id='eyes'>
 
                             <input
                                 onChange={(e) => setpassword(e.target.value)}
