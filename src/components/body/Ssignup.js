@@ -43,7 +43,7 @@ const Ssignup = () => {
             // let url = "https://localhost:9990/users/signup";
             // let userDetails = {firstname, lastname, email, password}
             console.log(values);
-            alert("account loading pleasse wait");
+            alert("account loading please wait");
             dispatch(postingUser())
             axios
                 .post(endpoint, values)
@@ -59,8 +59,8 @@ const Ssignup = () => {
                     setisloading(false);
                     setTimeout(() => {
                         navigate("/student/login");
-                      }, [5000])
-                    
+                    }, [5000])
+
                 })
                 .catch((errors) => {
                     // const value = (Response.data)
