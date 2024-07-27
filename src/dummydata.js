@@ -310,7 +310,7 @@ export const price = [
 export const faq = [
   {
     title: "How to Enroll This Online Courses?",
-    desc: "We have all the follow courses avaliable in vitual class, two times a week Wed and sartudays.",
+    desc: "We have all the follow courses available in virtual class, two times a week Wed and sartudays.",
   },
   {
     title: "Where It is hidden by default, until the collapse?",
@@ -325,12 +325,12 @@ export const faq = [
     desc: "This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
   },
   {
-    title: "I'am too old to aplly for any courses?",
-    desc: "Learning never Ends, so you are not too old please. No matter how old you are, there is something in you that is unquie put them in Teach.",
+    title: "I'am too old to apply for any courses?",
+    desc: "Learning never Ends, so you are not too old please. No matter how old you are, there is something in you that is unique put them in Teach.",
   },
   {
     title: "How Can my Kids apply?",
-    desc: "It is easy, only with working laptop with internet connection,'Kids from 6 years old to 15 years old are allow in our Kid department' we have all it take to train your Kids in perfctly way",
+    desc: "It is easy, only with working laptop with internet connection,'Kids from 6 years old to 15 years old are allow in our Kid department' we have all it take to train your Kids in perfectly way",
   },
 ]
 export const blog = [

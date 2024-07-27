@@ -29,10 +29,7 @@ import Setpassword from "./components/body/Setpassword"
 
 function App() {
   let token = localStorage.token
-  const navigate = useNavigate()
-  // let dispatch = useDispatch()
-  // let count = useSelector(state=>state.counterReducer)
-  // console.log(count);
+  const navigate = useNavigate();
  
   return (
     <>

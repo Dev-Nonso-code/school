@@ -24,6 +24,7 @@ const Ssignup = () => {
     const [isloading, setisloading] = useState(false);
 
     const endpoint = "https://backend-i6k6.onrender.com/log/signup";
+    // const endpoint = "http://localhost:5100/log/signup";
     let navigate = useNavigate();
     const show = () => {
         showing ? setshowing(false) : setshowing(true)
@@ -42,7 +43,7 @@ const Ssignup = () => {
             // let url = "https://localhost:9990/users/signup";
             // let userDetails = {firstname, lastname, email, password}
             console.log(values);
-            alert("account loading pleasse wait");
+            alert("account loading please wait");
             dispatch(postingUser())
             axios
                 .post(endpoint, values)
@@ -58,8 +59,8 @@ const Ssignup = () => {
                     setisloading(false);
                     setTimeout(() => {
                         navigate("/student/login");
-                      }, [5000])
-                    
+                    }, [5000])
+
                 })
                 .catch((errors) => {
                     // const value = (Response.data)
